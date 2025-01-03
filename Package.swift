@@ -1,22 +1,20 @@
-// swift-tools-version:5.7
+// swift-tools-version: 6.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
-    name: "surreal-interactive-openxr-framework",
-    platforms: [
-	.visionOS(.v2)
-    ],
+    name: "SurrealTouchSDK",
     products: [
+        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "surreal-interactive-openxr-framework",
-            targets: ["surreal-interactive-openxr-framework"]
-        ),
+            name: "SurrealTouchSDK",
+            targets: ["surreal-interactive-openxr-framework"]),
     ],
     targets: [
         .binaryTarget(
             name: "surreal-interactive-openxr-framework",
-            path: "surreal-interactive-openxr-framework.xcframework"
+            path: "Sources/surreal-interactive-openxr-framework.xcframework"
         ),
-    ],
-    swiftLanguageVersions: [.v5]
+    ]
 )
